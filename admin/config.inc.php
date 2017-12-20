@@ -1,8 +1,41 @@
 <?php
-define('SITE_URL', 'http://localhost/newsite/');
-define('SITE_DIR', '/var/www/html/newsite/');
 
-define('SITE_URL_ADMIN', 'http://localhost/newsite/admin/');
-define('SITE_DIR_ADMIN', '/var/www/html/newsite/admin/');
+$show_err = true;//false;
 
+if($show_err === true){
+	ini_set("display_erros",1);
+	error_reporting(E_ALL);
+}else{
+	ini_set("display_erros",0);
+	error_reporting(0);
+}
+
+$site_url = 'http://localhost/newsite/';
+$site_dir = '/var/www/html/newsite/';
+
+$site_url_admin = 'http://localhost/newsite/admin/';
+$site_dir_admin = '/var/www/html/newsite/admin/';
+
+define('SITE_URL', $site_url);
+define('SITE_DIR', $site_dir);
+
+define('SITE_URL_ADMIN', $site_url_admin);
+define('SITE_DIR_ADMIN', $site_dir_admin);
+
+define('DB_SERVER','localhost');
+define('DB_USER','root');
+define('DB_PASS','shyam@01');
+define('DB_NAME','newsite');
+
+
+$con = new mysqli(DB_SERVER, DB_USER, DB_PASS, DB_NAME);
+if(mysqli_connect_errno()) {
+	echo "Error: Could not connect to database.";exit;
+}
+
+$GLOBALS['con'];
+
+//$a = $con->query("SELECT * FROM users")->fetch_all(MYSQLI_ASSOC);print_r($a);
+
+echo "aaa";
 ?>
