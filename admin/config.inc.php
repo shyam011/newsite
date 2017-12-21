@@ -15,12 +15,15 @@ $site_dir = '/var/www/html/newsite/';
 
 $site_url_admin = 'http://localhost/newsite/admin/';
 $site_dir_admin = '/var/www/html/newsite/admin/';
+$salt = '$2a$07$thisisthebestmethodofencryptioneverybodymusttry';
 
 define('SITE_URL', $site_url);
 define('SITE_DIR', $site_dir);
 
 define('SITE_URL_ADMIN', $site_url_admin);
 define('SITE_DIR_ADMIN', $site_dir_admin);
+
+define('PASS_SALT', $salt);
 
 define('DB_SERVER','localhost');
 define('DB_USER','root');
