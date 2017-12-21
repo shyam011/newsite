@@ -1,5 +1,11 @@
-<?php include 'include/head.php';?>
-        <?php include 'include/header.php';?>
+<?php
+include_once 'entrypoint.php';
+
+checklogin();
+
+include 'include/head.php';
+include 'include/header.php';
+?>
     <div class="right_col" role="main"> 
       <!-- top tiles -->
       <div class="row tile_count">

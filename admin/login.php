@@ -1,3 +1,9 @@
+<?php
+include_once('entrypoint.php');
+if( isset($_SESSION['user_type']) && isset($_SESSION['id']) ){
+  echo '<meta http-equiv="refresh" content="0; url='.SITE_URL_ADMIN.'dashboard.php">';exit;
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

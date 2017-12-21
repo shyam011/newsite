@@ -40,5 +40,5 @@ $GLOBALS['con'];
 
 //$a = $con->query("SELECT * FROM users")->fetch_all(MYSQLI_ASSOC);print_r($a);
 
-echo "aaa";
+//echo "aaa";
 ?>
