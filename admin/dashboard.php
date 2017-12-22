@@ -1,6 +1,7 @@
 <?php
 include_once 'entrypoint.php';
 
+	
 checklogin();
 
 include 'include/head.php';
