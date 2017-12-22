@@ -24,6 +24,8 @@ define('SITE_URL_ADMIN', $site_url_admin);
 define('SITE_DIR_ADMIN', $site_dir_admin);
 
 define('PASS_SALT', $salt);
+define('SECURE_CHECK', true);			//false
+define('SECURE_CHECK_DURATION', 300);	// Check for 5min
 
 define('DB_SERVER','localhost');
 define('DB_USER','root');
