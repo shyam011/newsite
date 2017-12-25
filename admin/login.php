@@ -1,6 +1,9 @@
 <?php
 include_once('entrypoint.php');
 //registerSession(1);
+//$a = array('email' => 'shyamsundar011@gmail.co', 'pass' => cryptPass('shyam'), 'fname' => 'Shyam1', 'lname' => 'Sundar1', 'user_type' => 'Admin', 'created_at' => date('Y-m-d H:i:s'));
+//echo crud::create('users',$a);
+//echo crud::delete('users', ' AND id=5 ');
 if( isset($_SESSION['user_type']) && isset($_SESSION['id']) ){
   echo '<meta http-equiv="refresh" content="0; url='.SITE_URL_ADMIN.'dashboard.php">';exit;
 }
