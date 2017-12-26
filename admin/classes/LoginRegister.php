@@ -11,7 +11,7 @@ public function login( $userName, $password ){
 
 		$getRow = $con->query("SELECT * FROM users WHERE email='$userName' AND status='Active' LIMIT 1")->fetch_object();
 
-		if( $getRow->id > 0 && checkPass( $getRow->pass, $password ) === true ){
+		if( isset($getRow->id) && $getRow->id > 0 && checkPass( $getRow->pass, $password ) === true ){
 			registerSession($getRow->id);
 			return json_encode(array('success' => true, 'msg' => 'Successfully Logged In'));
 		}else{

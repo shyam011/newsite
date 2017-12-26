@@ -38,7 +38,7 @@ if( isset($_SESSION['user_type']) && isset($_SESSION['id']) ){
       <section class="login_content">
         <form method="post">
           <h1>Login Form</h1>
-<?php showSessionMessage($_SESSION['err']); ?>
+<?php @showSessionMessage($_SESSION['err']); ?>
           <div><input type="text" class="form-control" name="email" value="<?php echo @$_POST['email']?>" placeholder="Email" required /></div>
           <div><input type="password" name="password" value="<?php echo @$_POST['password']?>" class="form-control" placeholder="Password" required /></div>
           <div> <input type='submit' class="btn btn-default submit" name="dologin" value="Log in"> <a class="reset_pass" href="#">Lost your password?</a> </div>
