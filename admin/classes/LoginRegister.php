@@ -9,7 +9,7 @@ public function login( $userName, $password ){
 		global $con;
 		$userName = $con->escape_string($userName);
 
-		$getRow = $con->query("SELECT * FROM users WHERE email='$userName' LIMIT 1")->fetch_object();
+		$getRow = $con->query("SELECT * FROM users WHERE email='$userName' AND status='Active' LIMIT 1")->fetch_object();
 
 		if( $getRow->id > 0 && checkPass( $getRow->pass, $password ) === true ){
 			registerSession($getRow->id);

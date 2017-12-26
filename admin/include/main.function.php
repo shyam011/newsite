@@ -19,7 +19,7 @@ function checklogin($user_type = 'member'){
 	$_SESSION['refreshtime'] = time();
 	if( SECURE_CHECK === true && ( time() - $_SESSION['secure_check_duration'] ) >= SECURE_CHECK_DURATION ){
 			global $con;
-			$chk = $con->query("SELECT * FROM users WHERE id={$_SESSION['id']} AND user_type='{$_SESSION['user_type']}' AND email='{$_SESSION['email']}' LIMIT 1")->fetch_object();
+			$chk = $con->query("SELECT * FROM users WHERE id={$_SESSION['id']} AND user_type='{$_SESSION['user_type']}' AND email='{$_SESSION['email']}' AND status='Active' LIMIT 1")->fetch_object();
 
 			if( $chk->id && checkPass($chk->pass,$_SESSION['pass']) === true ){
 				$_SESSION['secure_check_duration'] = time();

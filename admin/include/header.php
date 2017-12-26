@@ -37,7 +37,7 @@
 </div>
 <!-- /sidebar menu --> 
 <!-- /menu footer buttons -->
-<div class="sidebar-footer hidden-small"> <a data-toggle="tooltip" data-placement="top" title="Settings"> <span class="glyphicon glyphicon-cog" aria-hidden="true"></span> </a> <a data-toggle="tooltip" data-placement="top" title="FullScreen"> <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span> </a> <a data-toggle="tooltip" data-placement="top" title="Lock"> <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span> </a> <a data-toggle="tooltip" data-placement="top" title="Logout" href="#"> <span class="glyphicon glyphicon-off" aria-hidden="true"></span> </a> </div>
+<div class="sidebar-footer hidden-small"> <a data-toggle="tooltip" data-placement="top" title="Settings"> <span class="glyphicon glyphicon-cog" aria-hidden="true"></span> </a> <a data-toggle="tooltip" data-placement="top" title="FullScreen"> <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span> </a> <a data-toggle="tooltip" data-placement="top" title="Lock"> <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span> </a> <a data-toggle="tooltip" data-placement="top" title="Logout" href="<?php echo SITE_URL_ADMIN.'logout.php'?>"> <span class="glyphicon glyphicon-off" aria-hidden="true"></span> </a> </div>
 <!-- /menu footer buttons -->
 </div>
 </div>
@@ -52,7 +52,7 @@
             <li><a href="profile.php"> Profile</a></li>
             <li> <a href="javascript:;"> <span class="badge bg-red pull-right">50%</span> <span>Settings</span> </a> </li>
             <li><a href="javascript:;">Help</a></li>
-            <li><a href="#"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
+            <li><a href="<?php echo SITE_URL_ADMIN.'logout.php'?>"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
           </ul>
         </li>
         <li role="presentation" class="dropdown"><a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown" aria-expanded="false"> <i class="fa fa-envelope-o"></i> <span class="badge bg-green">6</span> </a>
