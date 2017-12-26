@@ -1,11 +1,19 @@
 <?php
 include_once('entrypoint.php');
+
 //registerSession(1);
 //$a = array('email' => 'shyamsundar011@gmail.co', 'pass' => cryptPass('shyam'), 'fname' => 'Shyam1', 'lname' => 'Sundar1', 'user_type' => 'Admin', 'created_at' => date('Y-m-d H:i:s'));
 //echo crud::create('users',$a);
 //echo crud::delete('users', ' AND id=5 ');
+//echo LoginRegister::register(array('email' => 'shyamsundar011@gmail.co.in','pass'=>'shyamyadav'));
+
+if(isset($_POST['dologin'])){
+	$trylogin = LoginRegister::login($_POST['email'], $_POST['password']);
+	$_SESSION['err'][] = $trylogin;
+}
+
 if( isset($_SESSION['user_type']) && isset($_SESSION['id']) ){
-  echo '<meta http-equiv="refresh" content="0; url='.SITE_URL_ADMIN.'dashboard.php">';exit;
+	echo '<meta http-equiv="refresh" content="1; url='.SITE_URL_ADMIN.'dashboard.php">';//exit;
 }
 ?>
 <!DOCTYPE html>
@@ -28,11 +36,12 @@ if( isset($_SESSION['user_type']) && isset($_SESSION['id']) ){
   <div class="login_wrapper">
     <div class="animate form login_form">
       <section class="login_content">
-        <form>
+        <form method="post">
           <h1>Login Form</h1>
-          <div><input type="text" class="form-control" placeholder="Username" required /></div>
-          <div><input type="password" class="form-control" placeholder="Password" required /></div>
-          <div> <a class="btn btn-default submit" href="index.html">Log in</a> <a class="reset_pass" href="#">Lost your password?</a> </div>
+<?php showSessionMessage($_SESSION['err']); ?>
+          <div><input type="text" class="form-control" name="email" value="<?php echo @$_POST['email']?>" placeholder="Email" required /></div>
+          <div><input type="password" name="password" value="<?php echo @$_POST['password']?>" class="form-control" placeholder="Password" required /></div>
+          <div> <input type='submit' class="btn btn-default submit" name="dologin" value="Log in"> <a class="reset_pass" href="#">Lost your password?</a> </div>
           <div class="clearfix"></div>
           <div class="separator">
             <p class="change_link">New to site? <a href="#signup" class="to_register"> Create Account </a> </p>
@@ -49,10 +58,9 @@ if( isset($_SESSION['user_type']) && isset($_SESSION['id']) ){
       <section class="login_content">
         <form>
           <h1>Create Account</h1>
-          <div><input type="text" class="form-control" placeholder="Username" required /></div>
           <div><input type="email" class="form-control" placeholder="Email" required /></div>
           <div><input type="password" class="form-control" placeholder="Password" required /></div>
-          <div> <a class="btn btn-default submit" href="index.html">Submit</a> </div>
+          <div> <a class="btn btn-default submit">Submit</a> </div>
           <div class="clearfix"></div>
           <div class="separator">
             <p class="change_link">Already a member ? <a href="#signin" class="to_register"> Log in </a> </p>

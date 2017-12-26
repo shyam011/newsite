@@ -55,6 +55,20 @@ function registerSession($user_id=''){
 }
 
 
+function checkEmail( $email ){
+	if( isset($email) ){
+		global $con;
+		$email = $con->escape_string($email);
+		$hasRow = $con->query("SELECT * FROM users WHERE email='$email'")->num_rows;
+		if( $hasRow > 0 ){
+			return true;
+		}else{
+			return false;
+		}
+	}
+}
+
+
 function unregisterSession(){
 		unset($_SESSION['id']);
 		unset($_SESSION['user_type']);
@@ -93,6 +107,28 @@ function decode_array($array){
 	return json_decode(base64_decode(urldecode($array)));
 }
 
+
+function showMessage($msg, $type = 'success'){
+//success, info, warning, danger
+
+	return '<div class="alert alert-'.$type.' fade in alert-dismissable" style="margin-top:18px;">
+				<a href="#" class="close" data-dismiss="alert" aria-label="close" title="close">×</a>
+			'.$msg.'
+			</div>';
+
+}
+
+
+function showSessionMessage($jsonData=''){
+	if($jsonData){
+		foreach($jsonData as $k => $data){
+			$real = json_decode($data);
+			$type = ($real->success == true) ? 'success' : ($real->type?:'danger');
+			echo showMessage($real->msg, $type);
+		}
+			unset($_SESSION['err']);
+	}
+}
 
 
 
