@@ -13,12 +13,23 @@
 <script src="assests/js/bootstrap.min.js"></script> 
 <!-- Responsive Table Data Scripts --> 
 <script src="assests/js/jquery.dataTables.min.js"></script> 
-<script src="assests/js/responsive.bootstrap.min.js"></script> 
+<!--<script src="assests/js/responsive.bootstrap.min.js"></script>-->
 <script src="assests/js/dataTables.fixedHeader.min.js"></script> 
 <script src="assests/js/dataTables.keyTable.min.js"></script> 
 <script src="assests/js/dataTables.responsive.min.js"></script> 
 <script src="assests/js/dataTables.scroller.min.js"></script> 
 <script src="assests/js/responsive.bootstrap.js"></script> 
+
+<script src="assests/js/jquery.hotkeys.js"></script>
+<script src="assests/js/prettify.js"></script>
+<!-- jQuery Tags Input -->
+<script src="assests/js/jquery.tagsinput.js"></script>
+<!-- Switchery -->
+<script src="assests/js/switchery.min.js"></script> 
+<!-- Select2 -->
+<script src="assests/js/select2.full.min.js"></script>
+<!-- Parsley -->
+<script src="assests/js/parsley.min.js"></script>
 
 <!-- FastClick --> 
 <script src="assests/js/fastclick.js"></script> 
@@ -39,7 +50,7 @@
 <script src="assests/js/jquery.flot.pie.js"></script> 
 <script src="assests/js/jquery.flot.time.js"></script> 
 <script src="assests/js/jquery.flot.stack.js"></script> 
-<script src="assests/js/query.flot.resize.js"></script> 
+<script src="assests/js/jquery.flot.resize.js"></script> 
 <!-- Flot plugins --> 
 <script src="assests/js/jquery.flot.orderBars.js"></script> 
 <script src="assests/js/jquery.flot.spline.min.js"></script> 

@@ -20,6 +20,7 @@
 <link href="assests/css/jqvmap.min.css" rel="stylesheet"/>
 <link href="assests/css/dropzone.min.css" rel="stylesheet"/>
 <link href="assests/css/daterangepicker.css" rel="stylesheet">
+<link href="assests/css/switchery.min.css" rel="stylesheet">
 <link href="assests/css/custom.min.css" rel="stylesheet">
 </head>
 
