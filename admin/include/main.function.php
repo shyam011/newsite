@@ -21,7 +21,7 @@ function checklogin($user_type = 'member'){
 			global $con;
 			$chk = $con->query("SELECT * FROM users WHERE id={$_SESSION['id']} AND user_type='{$_SESSION['user_type']}' AND email='{$_SESSION['email']}' AND status='Active' LIMIT 1")->fetch_object();
 
-			if( $chk->id && checkPass($chk->pass,$_SESSION['pass']) === true ){
+			if( $chk->id && $chk->pass == $_SESSION['pass'] ){
 				$_SESSION['secure_check_duration'] = time();
 			}else{
 				unregisterSession();
