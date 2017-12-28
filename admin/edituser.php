@@ -3,7 +3,20 @@ include_once 'entrypoint.php';
 checklogin('admin');
 
 
-if( isset($_POST) && $_POST['update_user'] ){
+if( isset($_POST['update_user']) ){
+
+/*
+$csrf = new csrf();
+$token_id = $csrf->get_token_id();
+$token_value = $csrf->get_token($token_id);
+
+if($csrf->check_valid('post')):
+   var_dump($_POST[$token_id]);
+else:
+ echo 'Not Valid';
+endif;
+*/
+
 	$fld = array(
 				'email'		=> $_POST['email'],
 				'gender'	=> $_POST['gender'],
@@ -40,13 +53,16 @@ if( isset($_GET['id']) && is_numeric($_GET['id']) ){
 		echo '<meta http-equiv="refresh" content="1; url='.SITE_URL_ADMIN.'dashboard.php">';
 	}
 }
-
-echo "<pre>";print_r($_POST);echo "</pre>";
+//echo "<pre>";print_r($_POST);echo "</pre>";
 //$a = new users();
 //echo $a->setUser(array('fname'=>'SH"YAM'),1);
 
 include 'include/head.php';
 include 'include/header.php';
+
+$csrf = new csrf();
+$token_id = $csrf->get_token_id();
+$token_value = $csrf->get_token($token_id);
 ?>
 
         <!-- page content -->
@@ -93,6 +109,7 @@ include 'include/header.php';
                   <div class="x_content">
                     <br />
                     <form id="user_form" method="post" data-parsley-validate class="form-horizontal form-label-left">
+					<input type="hidden" name="<?php echo $token_id; ?>" value="<?php echo $token_value; ?>" />
 	<?php echo @$msg;?>
                       <div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="fname">First Name <span class="required">*</span>

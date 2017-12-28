@@ -1,5 +1,4 @@
-<br />
-<b>Warning</b>:  is_dir(): open_basedir restriction in effect. File(/usr/share/php/php-php-gettext/) is not within the allowed path(s): (/usr/share/phpmyadmin/:/etc/phpmyadmin/:/var/lib/phpmyadmin/:/usr/share/php/php-gettext/:/usr/share/php/php-php-gettext/:/usr/share/javascript/:/usr/share/php/tcpdf/:/usr/share/doc/phpmyadmin/:/usr/share/php/phpseclib/) in <b>/usr/share/phpmyadmin/libraries/vendor_config.php</b> on line <b>64</b><br />
+create database newsite;
 -- phpMyAdmin SQL Dump
 -- version 4.6.6deb1+deb.cihar.com~trusty.2
 -- https://www.phpmyadmin.net/
