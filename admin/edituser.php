@@ -2,6 +2,49 @@
 include_once 'entrypoint.php';
 checklogin('admin');
 
+
+if( isset($_POST) && $_POST['update_user'] ){
+	$fld = array(
+				'email'		=> $_POST['email'],
+				'gender'	=> $_POST['gender'],
+				'status1'	=> $_POST['status'],
+				'fname'		=> $_POST['fname'],
+				'lname'		=> $_POST['lname'],
+				'user_type'	=> $_POST['user_type'],
+				'updated_at'=> date('Y-m-d H:i:s'),
+				);
+
+	$up = json_decode( users::setUser($fld, $_GET['id']) );
+	
+	if($up->success === true){
+	}else{
+		$msg = showMessage($up->msg,'danger');
+	}
+}
+
+
+if( isset($_GET['id']) && is_numeric($_GET['id']) ){
+	$record = $_GET['id'];
+	$uData = json_decode(users::getUser($record));
+
+	if($uData->success === true){
+
+		if( sizeof($uData->data) > 0 ){
+			$data = $uData->data[0];
+		}else{
+			$msg = showMessage("Record not found.",'danger');
+			echo '<meta http-equiv="refresh" content="1; url='.SITE_URL_ADMIN.'dashboard.php">';
+		}
+	}else{
+		$msg = showMessage($uData->msg,'danger');
+		echo '<meta http-equiv="refresh" content="1; url='.SITE_URL_ADMIN.'dashboard.php">';
+	}
+}
+
+echo "<pre>";print_r($_POST);echo "</pre>";
+//$a = new users();
+//echo $a->setUser(array('fname'=>'SH"YAM'),1);
+
 include 'include/head.php';
 include 'include/header.php';
 ?>
@@ -13,7 +56,6 @@ include 'include/header.php';
               <div class="title_left">
                 <h3>Edit User</h3>
               </div>
-
               <div class="title_right">
                 <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
                   <div class="input-group">
@@ -50,26 +92,48 @@ include 'include/header.php';
                   </div>
                   <div class="x_content">
                     <br />
-                    <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
-
+                    <form id="user_form" method="post" data-parsley-validate class="form-horizontal form-label-left">
+	<?php echo @$msg;?>
                       <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">First Name <span class="required">*</span>
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="fname">First Name <span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12">
+                          <input type="text" id="fname" name="fname" required="required" value="<?php echo @$data->fname?>" class="form-control col-md-7 col-xs-12">
                         </div>
                       </div>
                       <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Last Name <span class="required">*</span>
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="lname">Last Name <span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="text" id="last-name" name="last-name" required="required" class="form-control col-md-7 col-xs-12">
+                          <input type="text" id="lname" name="lname" required="required" value="<?php echo @$data->lname?>" class="form-control col-md-7 col-xs-12">
                         </div>
                       </div>
                       <div class="form-group">
-                        <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Middle Name / Initial</label>
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="email">Email <span class="required">*</span>
+                        </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input id="middle-name" class="form-control col-md-7 col-xs-12" type="text" name="middle-name">
+                          <input type="text" id="email" name="email" required="required" value="<?php echo @$data->email?>" class="form-control col-md-7 col-xs-12">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="status" class="control-label col-md-3 col-sm-3 col-xs-12">Status</label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <select id="status" name="status" class="form-control col-md-7 col-xs-12" required>
+                            <option value="">Choose..</option>
+                            <option value="Active" <?php echo (@$data->status == 'Active')?'SELECTED':''?>>Active</option>
+                            <option value="Pending" <?php echo (@$data->status == 'Pending')?'SELECTED':''?>>Pending</option>
+                            <option value="Inactive" <?php echo (@$data->status == 'Inactive')?'SELECTED':''?>>Inactive</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="user_type" class="control-label col-md-3 col-sm-3 col-xs-12">User Type</label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <select id="user_type" name="user_type" class="form-control col-md-7 col-xs-12" required>
+                            <option value="">Choose..</option>
+                            <option value="Admin" <?php echo (@$data->user_type == 'Admin')?'SELECTED':''?>>Admin</option>
+                            <option value="Member" <?php echo (@$data->user_type == 'Member')?'SELECTED':''?>>Member</option>
+                          </select>
                         </div>
                       </div>
                       <div class="form-group">
@@ -77,30 +141,31 @@ include 'include/header.php';
                         <div class="col-md-6 col-sm-6 col-xs-12">
                            <div class="radio">
                             <label>
-                              <input type="radio" class="flat" value="male" checked name="gender"> Male
+                              <input type="radio" class="flat" value="Male" <?php echo (@$data->gender == 'Male' || @$data->gender == '')?'checked':''?> name="gender"> Male
                             </label>
 <!--                           </div>
                           <div class="radio">
  -->                            <label>
-                              <input type="radio" class="flat" value="female" name="gender"> Female
+                              <input type="radio" class="flat" value="Female" <?php echo (@$data->gender == 'Female')?'checked':''?>  name="gender"> Female
+                          <input type="text" name="update" value="Submit">
                             </label>
                           </div>
 
                         </div>
                       </div>
-                      <div class="form-group">
+                      <!--<div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12">Date Of Birth <span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
                           <input id="birthday" class="date-picker form-control col-md-7 col-xs-12" required="required" type="text">
                         </div>
-                      </div>
+                      </div>-->
                       <div class="ln_solid"></div>
                       <div class="form-group">
                         <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
                           <button class="btn btn-primary" type="button">Cancel</button>
-						  <button class="btn btn-primary" type="reset">Reset</button>
-                          <button type="submit" class="btn btn-success">Submit</button>
+						  <!--<button class="btn btn-primary" type="reset">Reset</button>-->
+                          <input type="Submit" name="update_user" class="btn btn-success" value="Submit" />
                         </div>
                       </div>
 

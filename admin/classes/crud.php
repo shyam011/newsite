@@ -2,6 +2,24 @@
 
 class crud{
 
+
+static public function selectRow( $table, $fields='*', $whr='' ){
+	if( isset($table) && $table != '' ){
+		global $con;
+
+		$query = "SELECT $fields FROM ".$table." WHERE 1 $whr;";
+		$sel = $con->query($query);
+		if($sel){
+			return json_encode( array( 'success' => true, 'data' => $sel->fetch_all(MYSQLI_ASSOC) ) );
+		}else{
+			return json_encode(array('success' => false, 'msg' => $con->error));
+		}
+	}else{
+			return json_encode(array('success' => false, 'msg' => 'Table name missing'));
+	}
+}
+
+
 public function create( $table, $fields ){
 
 	if( isset($table) && isset($fields) && $table != '' && sizeof($fields) > 0 ){
