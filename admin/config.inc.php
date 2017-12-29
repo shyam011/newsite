@@ -1,6 +1,6 @@
 <?php
 
-$show_err = true;//false;
+$show_err = false;
 
 if($show_err === true){
 	ini_set("display_erros",1);

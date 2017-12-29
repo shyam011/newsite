@@ -3,33 +3,27 @@ include_once 'entrypoint.php';
 checklogin('admin');
 
 
-if( isset($_POST['update_user']) ){
+if( isset($_POST['update_user']) && $_POST['update_user'] == 'save'){
 
-/*
-$csrf = new csrf();
-$token_id = $csrf->get_token_id();
-$token_value = $csrf->get_token($token_id);
-
-if($csrf->check_valid('post')):
-   var_dump($_POST[$token_id]);
-else:
- echo 'Not Valid';
-endif;
-*/
 
 	$fld = array(
 				'email'		=> $_POST['email'],
 				'gender'	=> $_POST['gender'],
-				'status1'	=> $_POST['status'],
+				'status'	=> $_POST['status'],
 				'fname'		=> $_POST['fname'],
 				'lname'		=> $_POST['lname'],
 				'user_type'	=> $_POST['user_type'],
-				'updated_at'=> date('Y-m-d H:i:s'),
+				'updated_at'=> $_GET['id']?date('Y-m-d H:i:s'):null,
 				);
 
 	$up = json_decode( users::setUser($fld, $_GET['id']) );
 	
 	if($up->success === true){
+		$msg = showMessage($up->msg,'success');
+		if(isset($up->id)){
+			$msg .= " Please wait...";
+			echo '<meta http-equiv="refresh" content="2; url='.SITE_URL_ADMIN.'edituser.php?id='.$up->id.'">';
+		}
 	}else{
 		$msg = showMessage($up->msg,'danger');
 	}
@@ -59,10 +53,6 @@ if( isset($_GET['id']) && is_numeric($_GET['id']) ){
 
 include 'include/head.php';
 include 'include/header.php';
-
-$csrf = new csrf();
-$token_id = $csrf->get_token_id();
-$token_value = $csrf->get_token($token_id);
 ?>
 
         <!-- page content -->
@@ -109,7 +99,7 @@ $token_value = $csrf->get_token($token_id);
                   <div class="x_content">
                     <br />
                     <form id="user_form" method="post" data-parsley-validate class="form-horizontal form-label-left">
-					<input type="hidden" name="<?php echo $token_id; ?>" value="<?php echo $token_value; ?>" />
+					<input type="hidden" name="update_user" value="save" />
 	<?php echo @$msg;?>
                       <div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="fname">First Name <span class="required">*</span>
@@ -164,7 +154,6 @@ $token_value = $csrf->get_token($token_id);
                           <div class="radio">
  -->                            <label>
                               <input type="radio" class="flat" value="Female" <?php echo (@$data->gender == 'Female')?'checked':''?>  name="gender"> Female
-                          <input type="text" name="update" value="Submit">
                             </label>
                           </div>
 
@@ -182,7 +171,7 @@ $token_value = $csrf->get_token($token_id);
                         <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
                           <button class="btn btn-primary" type="button">Cancel</button>
 						  <!--<button class="btn btn-primary" type="reset">Reset</button>-->
-                          <input type="Submit" name="update_user" class="btn btn-success" value="Submit" />
+							<button class="btn btn-success" type="submit">Submit</button>
                         </div>
                       </div>
 
