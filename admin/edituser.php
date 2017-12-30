@@ -13,15 +13,15 @@ if( isset($_POST['update_user']) && $_POST['update_user'] == 'save'){
 				'fname'		=> $_POST['fname'],
 				'lname'		=> $_POST['lname'],
 				'user_type'	=> $_POST['user_type'],
+				'updated_at'=> $_GET['id']?null:date('Y-m-d H:i:s'),
 				'updated_at'=> $_GET['id']?date('Y-m-d H:i:s'):null,
 				);
 
-	$up = json_decode( users::setUser($fld, $_GET['id']) );
+	$up = json_decode( usersClass::setUser($fld, $_GET['id']) );
 	
 	if($up->success === true){
 		$msg = showMessage($up->msg,'success');
 		if(isset($up->id)){
-			$msg .= " Please wait...";
 			echo '<meta http-equiv="refresh" content="2; url='.SITE_URL_ADMIN.'edituser.php?id='.$up->id.'">';
 		}
 	}else{
@@ -32,7 +32,7 @@ if( isset($_POST['update_user']) && $_POST['update_user'] == 'save'){
 
 if( isset($_GET['id']) && is_numeric($_GET['id']) ){
 	$record = $_GET['id'];
-	$uData = json_decode(users::getUser($record));
+	$uData = json_decode(usersClass::getUser($record));
 
 	if($uData->success === true){
 
@@ -61,6 +61,7 @@ include 'include/header.php';
             <div class="page-title">
               <div class="title_left">
                 <h3>Edit User</h3>
+                <small><a href="<?php echo SITE_URL_ADMIN?>users.php">Back to List</a></small>
               </div>
               <div class="title_right">
                 <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
@@ -78,8 +79,9 @@ include 'include/header.php';
               <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2>Form Design <small>different form elements</small></h2>
-                    <ul class="nav navbar-right panel_toolbox">
+                    <h2><?php echo @$data->fname.''.$data->lname;?> <small><?php echo @$data->email?></small></h2>
+                    <a href="<?php echo SITE_URL_ADMIN?>edituser.php" class="btn btn-sm btn-primary pull-right">Add New User</a>
+<!--                     <ul class="nav navbar-right panel_toolbox">
                       <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                       </li>
                       <li class="dropdown">
@@ -94,7 +96,7 @@ include 'include/header.php';
                       <li><a class="close-link"><i class="fa fa-close"></i></a>
                       </li>
                     </ul>
-                    <div class="clearfix"></div>
+ -->                    <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
                     <br />
@@ -169,7 +171,7 @@ include 'include/header.php';
                       <div class="ln_solid"></div>
                       <div class="form-group">
                         <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
-                          <button class="btn btn-primary" type="button">Cancel</button>
+                          <button class="btn btn-primary" type="button" onclick="history.go(-1);">Cancel</button>
 						  <!--<button class="btn btn-primary" type="reset">Reset</button>-->
 							<button class="btn btn-success" type="submit">Submit</button>
                         </div>

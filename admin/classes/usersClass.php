@@ -1,6 +1,6 @@
 <?php
 
-class users extends crud{
+class usersClass extends crud{
 
 public static $table = 'users';
 

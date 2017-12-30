@@ -26,9 +26,9 @@
           <li><a href="#">Images Details</a></li>
         </ul>
       </li>
-      <li><a><i class="fa fa-clone"></i> Audios <span class="fa fa-chevron-down"></span></a>
+      <li><a><i class="fa fa-clone"></i> Users <span class="fa fa-chevron-down"></span></a>
         <ul class="nav child_menu">
-          <li><a href="#">Uploaded Audio Items</a></li>
+          <li><a href="<?php echo SITE_URL_ADMIN;?>users.php">All Users</a></li>
           <li><a href="#">Audio Details</a></li>
         </ul>
       </li>

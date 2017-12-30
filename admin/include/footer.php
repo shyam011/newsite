@@ -20,6 +20,19 @@
 <script src="assests/js/dataTables.scroller.min.js"></script> 
 <script src="assests/js/responsive.bootstrap.js"></script> 
 
+<!-- Other related to table -->
+    <script src="assests/js/dataTables.bootstrap.min.js"></script>
+    <script src="assests/js/dataTables.buttons.min.js"></script>
+    <script src="assests/js/buttons.bootstrap.min.js"></script>
+    <script src="assests/js/buttons.flash.min.js"></script>
+    <script src="assests/js/buttons.html5.min.js"></script>
+    <script src="assests/js/buttons.print.min.js"></script>
+
+<!--     <script src="assests/js/jszip.min.js"></script>
+    <script src="assests/js/pdfmake.min.js"></script>
+    <script src="assests/js/vfs_fonts.js"></script>
+ --><!-- Other related to table -->
+
 <script src="assests/js/jquery.hotkeys.js"></script>
 <script src="assests/js/prettify.js"></script>
 <!-- jQuery Tags Input -->
