@@ -1,8 +1,9 @@
 <?php
 include_once 'entrypoint.php';
 checklogin('admin');
-
-$data = json_decode(usersClass::getUser($record));
+ini_set('display_errors',1);
+error_reporting(E_ALL);
+$data = json_decode(usersClass::getUser());
 
 include 'include/head.php';
 include 'include/header.php';

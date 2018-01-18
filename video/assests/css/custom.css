@@ -1,0 +1,227 @@
+body{margin:0px;padding:0px;font-family:Calibri;background:#eee;color:#333;height:100%;}
+a{color:#333;text-decoration:none;}
+.fleft{float:left !important;}
+.fright{float:right !important;}
+.clear{clear:both;}
+ul,ol,p,h1,h2,h3,h4,h5,h6,p{margin:0px;padding:0px;font-weight:normal;}
+img {max-width:100%;}
+::-webkit-input-placeholder {color:#999;}
+figure {margin:0px;position:relative;}
+.row .col {padding:0px;}
+i { background:url(../images/spriteimg.png) no-repeat;display:inline-block;vertical-align:middle;}
+/*------------- Header -----------------*/
+header{background:#2874f0;}
+header a {padding:5px 10px}
+header .right a {text-align:center;padding:5px;width:23px;height:23px;border-radius:100%;margin:5px;}
+header a.msg {width:28px;height:28px;line-height:28px;box-shadow:none;padding:0px;}
+header a.msg img {padding-top:5px;}
+.dropdown-content{min-width:120px;top:40px!important;right:0px!important;left:auto!important;}
+.dropdown-content li{min-height:0px;}
+.dropdown-content li>a{font-size:12px;line-height:14px;padding:5px;color:#333;font-weight:bold;width:100%;text-align:left;margin:0px;}
+/*-------------- All Pages Common Header --------*/
+.headertitle {border-bottom:1px solid #f1f1f1;background:#f7f7f7;position:fixed;top:0px;z-index:999;width:100%;}
+.headertitle a {padding:10px;line-height:17px;float:left;}
+.headertitle a.backbtn i {background-position:-71px -133px;width:18px;height:14px;}
+.headertitle a.delete i {background-position:-5px -147px;width:14px;height:16px;}
+/*------------- Category Menu Bar -----------------*/
+.catnav {background:#2874f0;position:relative;margin:0px;}
+.sticky {position:fixed;width:100%;transition:all 1s ease;z-index:9;top:0px}
+.catnav.row .col.s12 {padding:0px;}
+.catnav .tabs {height:30px;}
+.tabs .tab {line-height:25px;}
+.catnav .tabs .tab a {color:#fff;padding:0 5px;font-size:13px}
+.catmenu { padding:10px;}
+.catnav img {padding-top:7px;}
+/*------------- Side Nav Bar -----------------*/
+.side-nav{width:250px;z-index:999;border:none;}
+.side-nav li { position:relative;font-weight:bold;border-bottom:1px solid #eee;}
+.side-nav li>a{border-bottom:1px solid #eee;padding:0 25px;}
+.side-nav li span{position:absolute;right:10px;top:0px;}
+header, nav .tabs, .profileimg {background:#0564b5;}
+.profileimg{ text-align:center;color:#fff;}
+.profileimg img {width:50px;height:50px;border-radius:50%;margin:10px auto;}
+.profilename h3{font-size:14px;font-weight:bold;}
+.profilename p{font-size:12px;color:#eee;}
+.shape {background:#fff;height:30px;width:100%;fill:#0564b5;margin-top:5px;position:relative;z-index:999;}
+/*------------- Footer -----------------*/
+/*footer {position:fixed;left:0px;bottom:0px;width:100%;background:#2874f0;z-index:9}
+footer .tabs .tab a {display:block;padding:5px;}*/
+.tabs, .tabs .tab {background:transparent;}
+.tabs .indicator {background:#ff0000;}
+.tabs {height:30px;}
+/*------------- Slider Sections -----------------*/
+.slider.topslider {position:relative;height:180px !important;}
+.slider .indicators {z-index:2;bottom:5px;}
+.slider .indicators .indicator-item {margin:0 5px;width:10px;height:10px;}
+.slidercaptions { position:absolute;bottom:0px;left:0px;width:100%; padding:10px 10px 20px 50px; box-sizing:border-box;color:#fff;font-size:18px;
+background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.9) 70%);
+background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.9) 70%);
+background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.9) 70%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ffffff', endColorstr='#fff', GradientType=0);}
+.slidercaptions i {background-position:-63px -2px;width:32px;height:32px;position:absolute;left:10px;top:20px;}
+.slidercaptions h3 { font-size:20px; font-weight:bold;}
+.slidercaptions p { font-size:13px;line-height:15px;margin-top:5px;}
+.slidercaptions p span { display:block; font-size:11px;}
+/*------------- Video Listing ---------------*/
+.videodata {margin:0;}
+.videolist {position:relative;background:#fff;margin:15px 0}
+.videolist:last-child {margin-bottom:0px;}
+.videolistcat { margin:0px; padding:5px 10px;}
+.videolistcat .catlogo h3 {width:30px;height:30px;border-radius:30%;background:#d80000;text-align:center;line-height:30px;color:#fff;font-size:16px;}
+.videolistcat .catname {margin:0 5px; font-size:14px; font-weight:bold;}
+.videolistcat .catname p {font-size:11px; color:#999; line-height:10px;}
+.followbtn {position:absolute;right:30px;top:10px;}
+.followbtn a {border:1px solid #ccc;border-radius:5px;padding:3px 10px;}
+.followbtn a.following {color:green;border:1px solid green;}
+.morebtn {position:absolute;right:10px;top:8px;}
+.morebtn i {width:6px;height:6px;background:#999;display:block;border-radius:50%;margin-bottom:3px;}
+.videolist figcaption {margin:0px;padding:5px 10px;}
+.videolist figcaption h3 {color:#444;font-weight:600;line-height:15px;font-size:14px;width:100%;}
+.social {padding:5px 0;text-align:center;}
+.social a {display:inline-block;width:19%;}
+.social a.likes i {background-position:-7px -25px;width:20px;height:20px;}
+.social a.views i {background-position:-71px -64px;width:24px;height:16px;}
+.social a.download i {background-position:-37px -121px;width:15px;height:15px;}
+.social a.share i {background-position:-33px -27px;width:18px;height:18px;}
+.social a.comment i {background-position:-68px -38px;width:22px;height:20px;}
+.social a span {margin:3px 0px 0;position:relative;color:#7b7b7b;display:block;font-size:11px;}
+/*------------- Category Pages  ---------------*/
+#catpage {max-height:100%;height:100%;top:0px !important;width:100%;}
+.catheader {background:#333 url(../images/navbg1.jpg) no-repeat left top;background-size:100%;padding:15px;position:relative;}
+.catheader a.backbtn {padding:0px;height:auto;}
+.catheader a.backbtn i {background-position:-71px -115px;width:18px;height:14px;}
+.catheader:after {content:"";background:rgba(0,0,0,0.8);position:absolute;left:0px;top:0px;width:100%;height:100%;}
+.catpost {position:relative;z-index:2;float:right;}
+.catpost ul {margin:0px;padding:0px;}
+.catpost ul li {display:inline-block;color:#fff;font-weight:bold;font-size:25px;text-align:center;margin:0 10px;}
+.catpost ul li span {font-weight:normal;display:block;font-size:12px;}
+.aboutcat {position:relative;background:#fff;padding:30px 10px 10px;}
+.aboutcat .image {position:absolute;width:60px;height:60px;border-radius:100%;overflow:hidden;top:-30px;z-index:3;}
+.aboutcat .followbtn { position:absolute;right:10px;top:10px;width:100px;text-align:center;}
+.aboutcat .followbtn a {background:#00adff;padding:3px 10px;color:#fff;display:block;}
+.aboutcat h4 {font-size:25px;font-weight:bold;}
+.aboutcat p {line-height:18px;color:#999;}
+/*-------------- Image Tab pages ------*/
+.imagetabs {margin:0px;padding:0px;}
+.imagesvide {margin:0px;padding:0px;}
+.imagesvide ul{}
+.imagesvide ul li{float:left;margin:5px;width:46.5%;position:relative;}
+.imagesvide ul li img {display:block;}
+.imagesvide ul li .social {background:rgba(0,0,0,0.5);position:absolute;left:0px;bottom:0px;width:100%;padding:5px;z-index:5;}
+.imagesvide ul li .social a {color:#fff;width:50%;}
+#profileimage {width:100%;top:30% !important;}
+#profileimage .slider .indicators { bottom:50px;}
+#profileimage .slider .slides li {overflow:visible;}
+#profileimage .social {position:absolute;bottom:-35px;width:100%;z-index:9;}
+#profileimage .social a {width:32%;}
+#profileimage .social a span {vertical-align:middle;display:inline-block;margin:0 5px;}
+
+.catpage {margin:0px;padding:0px;}
+.catpage .cattitle {background:#2874f0;text-align:center;}
+.catpage .cattitle a {padding:10px;}
+.catpage a {color:#fff;width:100%;display:block;padding:5px;}
+.catpage ul li{width:50%;text-align:center;float:left;}
+.catpage h2 {font-size:17px;font-weight:bold;}
+.catpage p {font-size:12px;font-style:italic;}
+.caticon {width:32px;height:32px;background:rgba(100%,100%,100%,0.5);border-radius:100%;margin:0 10px;margin:0 auto;}
+.caticon h3 {font-size:22px;line-height:32px;text-transform:uppercase;}
+.caticon h5 {font-size:18px;line-height:32px;text-transform:uppercase;}
+
+
+.jockes {margin:0px;padding:0px;}
+.jockes .jockelist {padding:3px;margin:10px 0;background:#fff;}
+.jockes .jockelist blockquote {margin:2px;}
+.pagenationpage { margin:10px 0;}
+/*------------- Downloaded Pages  ---------------*/
+.pages {max-height:100%;height:100%;top:0px !important;width:100%;padding-top:35px;}
+#downloads .tabs .tab a {font-size:14px;padding:0 5px;color:#333;}
+#downloads .tabs .tab a:hover, #downloads .tabs .tab a.active {color:#ee6e73;}
+.mainpages {position:fixed;height:100%;overflow-y:scroll;padding-bottom:30px;width:100%;}
+.tabpage {}
+.tabpage h3 {font-size:12px;font-weight:bold;text-transform:uppercase; padding:15px 10px 0px;}
+.downloadlist {background:#fff;margin:10px 0px;border-bottom:1px solid #eaeaea;border-top:1px solid #eaeaea;}
+.downloadlist .thumb {width:25%;margin-right:5px;}
+.downloadlist .thumbdetails {width:65%;margin-right:10px;}
+.downloadlist .thumbdetails h4 {font-size:13px;height:40px;overflow:hidden;line-height:15px;}
+.downloadlist .thumbdetails h6 {background:#eee;border-radius:10px;width:100%; margin:5px 0 2px;overflow:hidden;}
+.downloadlist .thumbdetails h6 span {padding:2px 0;width:60%; background:#036;display:block;}
+.downloadlist .thumbdetails p {font-size:10px;color:#999;}
+.downloadlist .thumbdetails p span:last-child {float:right;}
+.downloadlist .thumbarrow {margin:0px;text-align:center;width:5%;}
+.downloadlist .thumbarrow i {width:5px;height:5px;background:#ccc;border-radius:100%;margin:5px auto;display:block;}
+/*------------- Notification Pages  ---------------*/
+.notificationHub {margin:0px;padding:0px;}
+.notificationHub h3 {font-size:12px;font-weight:bold;text-transform:uppercase;padding:15px 10px 0px;}
+.notificationlist {background:#fff;margin:10px 0px;border-bottom:1px solid #eaeaea;border-top:1px solid #eaeaea;}
+.notificationImage {width:25%;}
+.notificationTitle {width:75%;padding:5px;}
+.notificationTitle h4 {font-size:14px;height:45px;overflow:hidden;line-height:18px;}
+.notificationTitle p {font-size:11px;color:#999;}
+/*------------- Share Popup ---------------*/
+.sharevideos {border-radius:4px;top:30% !important;background:#fff;}
+.sharevideos ul li a {font-size:16px;padding:10px;display:block;width:100%;}
+/*------------- Page Uploaded  ---------------*/
+/*#uploadpage {max-height:100%;height:100%;background:#fff;padding-top:35px;}
+#uploadpage .file-field .btn, #uploadpage .file-field .btn-large {height:auto;line-height:20px;padding:10px;width:100%;}
+.fileuploaded {padding:15px;position:fixed;height:100%;overflow-y:scroll;padding-bottom:30px;}
+.fileuploaded select {display:block;}
+.previews {margin-top:20px}
+.previews h4 {font-size:20px;color:#555;font-weight:bold;margin:10px 0;display:block;}*/
+/*-------------- Comments box ------*/
+#comment {margin:0px;padding:0px;max-height:70%;height:100%;bottom:-1px !important;}
+#comment .closebtn {position:absolute;right:0px;top:0px;}
+#comment h3 {padding:10px 30px;font-weight:bold;font-size:18px;text-transform:uppercase;}
+#comment p {position:relative;font-weight:bold;}
+#comment p a {margin:20px 0;overflow:inherit;text-align:center;line-height:25px;padding:0px 5px;width:24%;}
+#comment p span {display:block;font-size:12px;}
+/*-------------- Share box ------*/
+#sharebox {margin:0px;padding:0px;max-height:25%;height:100%;}
+#sharebox .closebtn {position:absolute;right:0px;top:0px;}
+#sharebox h3 {padding:10px 30px;font-weight:bold;font-size:18px;text-transform:uppercase;}
+#sharebox p {position:relative;font-weight:bold;}
+#sharebox p a {margin:20px 0;overflow:inherit;text-align:center;line-height:25px;padding:0px 5px;width:24%;}
+#sharebox p span {display:block;font-size:12px;}
+#sharebox a.copy i {background-position:-41px -54px;width:19px;height:20px;}
+#sharebox a.fb i {background-position:-6px -86px;width:21px;height:21px;}
+#sharebox a.whatsApp i {background-position:-68px -83px;width:24px;height:24px;}
+#sharebox a.insta i {background-position:-34px -83px;width:24px;height:24px;}
+/*-------------  Search Pages ---------------*/
+.searchbar {background:#2874f0;padding:5px 10px;position:relative}
+.searchbar a {display:block;width:100%;position:static;}
+.searchbar input[type="text"]{background:#fff;border:none;border-radius:3px;padding:5px 35px;font-size:15px;box-sizing:border-box;height:30px;margin:0px}
+.searchbar:after {content:"";background:url(../images/search.svg) no-repeat;position:absolute;height:16px;width:16px;left:20px;top:12px}
+.searchbar input[type="text"]:focus {border:none !important;box-shadow:none !important;}
+.modal.searchbox{position:absolute;top:0px !important;left:0px;width:100%;height:100%;max-height:100%;background:#eee;border-radius:0;padding-top:35px;}
+.modal.searchbox input[type="search"] {margin:5px 0;padding:5px;background:#eee;border:none;border-radius:15px;width:75%;height:auto;}
+.modal.searchbox button {border:none;background:none;}
+.modal.searchbox button i {background-position:-26px -147px;width:16px;height:16px;}
+.modal.searchbox input[type="search"]:focus, .modal.searchbox input[type="button"]:focus {border:none;box-shadow:none;outline:none;}
+.searchcat {margin:0px; padding:10px;}
+.searchcat h3 {font-size:13px;font-weight:bold;padding:5px;}
+.searchcat ul {margin:0px;padding:0px;}
+.searchcat ul li {display:inline-block;font-size:12px;border:1px solid #ddd;padding:3px 10px;margin:3px 5px;background:#fff;}
+.topsearch {margin:0px;padding:0px;}
+.topsearch ul{margin:0px;padding:0px;list-style:none;}
+.topsearch ul li {width:49%;margin:0px;padding:0px;}
+.topsearch ul li a {display:block;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
