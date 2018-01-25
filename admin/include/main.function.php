@@ -16,6 +16,13 @@ function checklogin($user_type = 'member'){
 
 	}
 
+	secure_check();
+
+	return true;
+}
+
+
+function secure_check(){
 	$_SESSION['refreshtime'] = time();
 	if( SECURE_CHECK === true && ( time() - $_SESSION['secure_check_duration'] ) >= SECURE_CHECK_DURATION ){
 			global $con;
@@ -25,12 +32,11 @@ function checklogin($user_type = 'member'){
 				$_SESSION['secure_check_duration'] = time();
 			}else{
 				unregisterSession();
+				header("Refresh:0");
 			}
 
 	}
-	return true;
 }
-
 
 function registerSession($user_id=''){
 	if( isset($user_id) && is_numeric($user_id) ){

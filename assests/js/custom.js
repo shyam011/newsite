@@ -1,8 +1,20 @@
 $(document).ready(function(e) {
-    $(".dropdown-button").dropdown();
-	$(".button-collapse").sideNav();
-	$('.slider').slider({height: 200});
-	$('.modal').modal();
+   $('.carousel.carousel-slider').carousel({fullWidth: true}); 
+   $('.carousel').carousel({height:200,dist:-50,shift:0});
+   $('.slider').slider({height:180});
+   $(".button-collapse").sideNav();
+   $('ul.tabs').tabs();
+   $(".dropdown-button").dropdown();
+   $('.modal').modal();
+});
+
+$(window).scroll(function() {
+      if ($(this).scrollTop() > 70){
+      $('.catnav').addClass('sticky');
+      }
+      else{
+      $('.catnav').removeClass('sticky');
+      }
 });
 
 
@@ -11,14 +23,3 @@ $(document).ready(function(e) {
 	  $(this).toggleClass("following").text("Following")	
 	});
 });
-
-$(window).scroll(function() {
-      if ($(this).scrollTop() > 25){
-      $('nav').addClass('sticky');
-      }
-      else{
-      $('nav').removeClass('sticky');
-      }
-});
- 
-	
