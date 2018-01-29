@@ -8,6 +8,7 @@ img {max-width:100%;}
 ::-webkit-input-placeholder {color:#999;}
 figure {margin:0px;position:relative;}
 .row .col {padding:0px;}
+.tabs .tab a {padding:0 5px;}
 i { background:url(../images/spriteimg.png) no-repeat;display:inline-block;vertical-align:middle;}
 /*------------- Header -----------------*/
 header{background:#2874f0;}
@@ -15,15 +16,14 @@ header a {padding:5px 10px}
 header .right a {text-align:center;padding:5px;width:23px;height:23px;border-radius:100%;margin:5px;}
 header a.msg {width:28px;height:28px;line-height:28px;box-shadow:none;padding:0px;}
 header a.msg img {padding-top:5px;}
-.dropdown-content{min-width:120px;top:40px!important;right:0px!important;left:auto!important;}
-.dropdown-content li{min-height:0px;}
-.dropdown-content li>a{font-size:12px;line-height:14px;padding:5px;color:#333;font-weight:bold;width:100%;text-align:left;margin:0px;}
-/*-------------- All Pages Common Header --------*/
+header .dropdown-content{min-width:140px;top:40px!important;right:0px!important;left:auto!important;}
+header .dropdown-content li{min-height:0px;line-height:0;margin:0px;padding:0px;}
+header .dropdown-content li>a{font-size:12px;color:#333;font-weight:bold;width:100%;text-align:left;height:auto;border-radius:0;margin:0px;}
 .headertitle {border-bottom:1px solid #f1f1f1;background:#f7f7f7;position:fixed;top:0px;z-index:999;width:100%;}
 .headertitle a {padding:10px;line-height:17px;float:left;}
 .headertitle a.backbtn i {background-position:-71px -133px;width:18px;height:14px;}
 .headertitle a.delete i {background-position:-5px -147px;width:14px;height:16px;}
-/*------------- Category Menu Bar -----------------*/
+/*------------- Top Navigations Bar -----------------*/
 .catnav {background:#2874f0;position:relative;margin:0px;}
 .sticky {position:fixed;width:100%;transition:all 1s ease;z-index:9;top:0px}
 .catnav.row .col.s12 {padding:0px;}
@@ -31,25 +31,52 @@ header a.msg img {padding-top:5px;}
 .tabs .tab {line-height:25px;}
 .catnav .tabs .tab a {color:#fff;padding:0 5px;font-size:13px}
 .catmenu { padding:10px;}
-.catnav img {padding-top:7px;}
+.catnav img {padding-top:7px;margin:0 auto;}
 /*------------- Side Nav Bar -----------------*/
 .side-nav{width:250px;z-index:999;border:none;}
-.side-nav li { position:relative;font-weight:bold;border-bottom:1px solid #eee;}
-.side-nav li>a{border-bottom:1px solid #eee;padding:0 25px;}
-.side-nav li span{position:absolute;right:10px;top:0px;}
+.side-nav li { position:relative;font-weight:bold;border-bottom:1px solid #eee;font-family:arial;font-size:12px;}
+.side-nav li a {padding:0;text-align:center;width:100%;display:block;}
+.side-nav li .collapsible-header {width:100%;text-align:center;padding:0px;display:block;}
+.side-nav .collapsible-body, .side-nav.fixed .collapsible-body {background:#f2f2f2;}
+.side-nav li strong{position:absolute;right:10px;top:0px;color:#0564b5;}
+.side-nav li .collapsible-header.active > strong {transform:rotate(90deg);}
+.side-nav .collapsible a {border-top:1px solid #e8e8e8;transition:all 1s;line-height:30px;height:auto;font-size:12px;font-weight:normal;}
+.side-nav li span { font-weight:normal; margin:0 5px; color:#0564b5;}
 header, nav .tabs, .profileimg {background:#0564b5;}
-.profileimg{ text-align:center;color:#fff;}
-.profileimg img {width:50px;height:50px;border-radius:50%;margin:10px auto;}
+.profileimg{ text-align:center;color:#fff;padding:10px 0 0;}
+.profileimg img {width:50px;height:50px;border-radius:50%;margin:0px auto;}
 .profilename h3{font-size:14px;font-weight:bold;}
 .profilename p{font-size:12px;color:#eee;}
 .shape {background:#fff;height:30px;width:100%;fill:#0564b5;margin-top:5px;position:relative;z-index:999;}
 /*------------- Footer -----------------*/
-/*footer {position:fixed;left:0px;bottom:0px;width:100%;background:#2874f0;z-index:9}
-footer .tabs .tab a {display:block;padding:5px;}*/
+footer {position:fixed;left:0px;bottom:0px;width:100%;background:#2874f0;z-index:9}
+footer .tabs .tab a {display:block;padding:5px;}
 .tabs, .tabs .tab {background:transparent;}
 .tabs .indicator {background:#ff0000;}
 .tabs {height:30px;}
-/*------------- Slider Sections -----------------*/
+.fixed-action-btn {right:10px;bottom:45px;}
+.btn-floating.edit i{background-position:-5px -117px;width:24px;height:24px;margin:8px;}
+/*------------- Profile Page  ---------------*/
+#profile {max-height:100%;height:100%;background:#fff;}
+#profile .fixed-action-btn {right:120px;top:75px;bottom:100%; position:absolute;}
+#profileitems {width:100%;top:30% !important;}
+#profileitems .social {position:absolute;bottom:0px;width:100%;z-index:5;left:0px;background:rgba(255, 255, 255, 0.8);padding:0px;}
+#profileitems .slider .indicators {top:5px;}
+.profileheader {background:#333;padding:15px;position:relative;}
+.profileheader a.backbtn {padding:0px;height:auto;}
+.profileheader a.backbtn i {background-position:-71px -115px;width:18px;height:14px;}
+.profileheader:after {content:"";background:rgba(0,0,0,0.8);position:absolute;left:0px;top:0px;width:100%;height:100%;}
+.profilepost {position:relative;z-index:2;float:right;}
+.profilepost ul {margin:0px;padding:0px;}
+.profilepost ul li {display:inline-block;color:#fff;font-weight:bold;font-size:25px;text-align:center;margin:0 10px;}
+.profilepost ul li span {font-weight:normal;display:block;font-size:12px;}
+.aboutprofile {position:relative;background:#fff;padding:30px 10px 10px;}
+.aboutprofile .image {position:absolute;width:60px;height:60px;border-radius:100%;overflow:hidden;top:-30px;z-index:3;}
+.aboutprofile .followbtn { position:absolute;right:10px;top:10px;width:100px;text-align:center;}
+.aboutprofile .followbtn a {background:#00adff;padding:3px 10px;color:#fff;display:block;}
+.aboutprofile h4 {font-size:25px;font-weight:bold;}
+.aboutprofile p {line-height:18px;color:#999;}
+/*------------- All Slider Sections -----------------*/
 .slider.topslider {position:relative;height:180px !important;}
 .slider .indicators {z-index:2;bottom:5px;}
 .slider .indicators .indicator-item {margin:0 5px;width:10px;height:10px;}
@@ -62,15 +89,15 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ffffff', en
 .slidercaptions h3 { font-size:20px; font-weight:bold;}
 .slidercaptions p { font-size:13px;line-height:15px;margin-top:5px;}
 .slidercaptions p span { display:block; font-size:11px;}
-/*------------- Video Listing ---------------*/
+/*------------- Video Pages ---------------*/
 .videodata {margin:0;}
 .videolist {position:relative;background:#fff;margin:15px 0}
 .videolist:last-child {margin-bottom:0px;}
 .videolistcat { margin:0px; padding:5px 10px;}
 .videolistcat .catlogo h3 {width:30px;height:30px;border-radius:30%;background:#d80000;text-align:center;line-height:30px;color:#fff;font-size:16px;}
-.videolistcat .catname {margin:0 5px; font-size:14px; font-weight:bold;}
-.videolistcat .catname p {font-size:11px; color:#999; line-height:10px;}
-.followbtn {position:absolute;right:30px;top:10px;}
+.videolistcat .catname {margin:0 5px; font-size:14px;font-weight:bold;}
+.videolistcat .catname p {font-size:11px; color:#999;line-height:10px;}
+.followbtn {position:absolute;right:30px;top:5px;}
 .followbtn a {border:1px solid #ccc;border-radius:5px;padding:3px 10px;}
 .followbtn a.following {color:green;border:1px solid green;}
 .morebtn {position:absolute;right:10px;top:8px;}
@@ -78,59 +105,61 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ffffff', en
 .videolist figcaption {margin:0px;padding:5px 10px;}
 .videolist figcaption h3 {color:#444;font-weight:600;line-height:15px;font-size:14px;width:100%;}
 .social {padding:5px 0;text-align:center;}
-.social a {display:inline-block;width:19%;}
+.social a {display:inline-block;width:24%;}
 .social a.likes i {background-position:-7px -25px;width:20px;height:20px;}
+.social a.likes.active i {background-position:-7px -48px;width:20px;height:20px;}
 .social a.views i {background-position:-71px -64px;width:24px;height:16px;}
+.social a.copy i {background-position:-41px -54px;width:19px;height:20px;}
 .social a.download i {background-position:-37px -121px;width:15px;height:15px;}
 .social a.share i {background-position:-33px -27px;width:18px;height:18px;}
 .social a.comment i {background-position:-68px -38px;width:22px;height:20px;}
 .social a span {margin:3px 0px 0;position:relative;color:#7b7b7b;display:block;font-size:11px;}
-/*------------- Category Pages  ---------------*/
-#catpage {max-height:100%;height:100%;top:0px !important;width:100%;}
-.catheader {background:#333 url(../images/navbg1.jpg) no-repeat left top;background-size:100%;padding:15px;position:relative;}
-.catheader a.backbtn {padding:0px;height:auto;}
-.catheader a.backbtn i {background-position:-71px -115px;width:18px;height:14px;}
-.catheader:after {content:"";background:rgba(0,0,0,0.8);position:absolute;left:0px;top:0px;width:100%;height:100%;}
-.catpost {position:relative;z-index:2;float:right;}
-.catpost ul {margin:0px;padding:0px;}
-.catpost ul li {display:inline-block;color:#fff;font-weight:bold;font-size:25px;text-align:center;margin:0 10px;}
-.catpost ul li span {font-weight:normal;display:block;font-size:12px;}
-.aboutcat {position:relative;background:#fff;padding:30px 10px 10px;}
-.aboutcat .image {position:absolute;width:60px;height:60px;border-radius:100%;overflow:hidden;top:-30px;z-index:3;}
-.aboutcat .followbtn { position:absolute;right:10px;top:10px;width:100px;text-align:center;}
-.aboutcat .followbtn a {background:#00adff;padding:3px 10px;color:#fff;display:block;}
-.aboutcat h4 {font-size:25px;font-weight:bold;}
-.aboutcat p {line-height:18px;color:#999;}
-/*-------------- Image Tab pages ------*/
+.social a.download.active, .social a.share.active {opacity:0.5;}
+/*-------------- Image pages ------*/
 .imagetabs {margin:0px;padding:0px;}
 .imagesvide {margin:0px;padding:0px;}
 .imagesvide ul{}
 .imagesvide ul li{float:left;margin:5px;width:46.5%;position:relative;}
+.imagesvide ul li:nth-of-type(2n + 1){ clear:both;}
 .imagesvide ul li img {display:block;}
 .imagesvide ul li .social {background:rgba(0,0,0,0.5);position:absolute;left:0px;bottom:0px;width:100%;padding:5px;z-index:5;}
 .imagesvide ul li .social a {color:#fff;width:50%;}
-#profileimage {width:100%;top:30% !important;}
-#profileimage .slider .indicators { bottom:50px;}
-#profileimage .slider .slides li {overflow:visible;}
-#profileimage .social {position:absolute;bottom:-35px;width:100%;z-index:9;}
+/*#profileimage {width:100%;top:0% !important;height:100%;max-height:100%;padding-top:40px;}*/
+#profileimage .carousel, #profileimage .carousel .carousel-item {height:170px;}
+#profileimage .social {position:absolute;bottom:0px;width:100%;z-index:9;background:#fff;padding:7px;}
 #profileimage .social a {width:32%;}
 #profileimage .social a span {vertical-align:middle;display:inline-block;margin:0 5px;}
-
 .catpage {margin:0px;padding:0px;}
 .catpage .cattitle {background:#2874f0;text-align:center;}
-.catpage .cattitle a {padding:10px;}
-.catpage a {color:#fff;width:100%;display:block;padding:5px;}
-.catpage ul li{width:50%;text-align:center;float:left;}
-.catpage h2 {font-size:17px;font-weight:bold;}
-.catpage p {font-size:12px;font-style:italic;}
-.caticon {width:32px;height:32px;background:rgba(100%,100%,100%,0.5);border-radius:100%;margin:0 10px;margin:0 auto;}
-.caticon h3 {font-size:22px;line-height:32px;text-transform:uppercase;}
-.caticon h5 {font-size:18px;line-height:32px;text-transform:uppercase;}
-
-
+.catpage .cattitle a {width:100%;display:block;padding:27px 0;}
+.catpage .cattitle h2 {font-size:20px;color:#fff;font-weight: bold;}
+.catpage .cattitle p {font-size:12px;font-style:italic;color:#fff;}
+.catlisting ul li{width:50%;text-align:center;float:left;}
+.catlisting ul li a {width:100%;display:block;padding:10px;}
+.catlisting h2 {font-size:17px;font-weight:bold;color:#fff;}
+.catlisting p {font-size:12px;font-style:italic;color:#fff;}
+.catlisting .caticon {width:28px;height:28px;background:rgba(100%,100%,100%,0.5);border-radius:100%;margin:0 10px;margin:5px auto;}
+.catlisting .caticon h3 {font-size:17px;line-height:28px;text-transform:uppercase;}
+.catlisting .caticon h5 {font-size:15px;line-height:28px;text-transform:uppercase;}
+/*------------- Category Pages  ---------------*/
+#catpage .followbtn {right:10px;}
+/*------------- Watch List Pages  ---------------*/
+.followpage{margin-top:15px;}
+.followlist {background:#fff;margin:5px 0px;border-bottom:1px solid #eaeaea;border-top:1px solid #eaeaea;padding:10px;position:relative;}
+.brandlogo {width:40px;height:40px;border-radius:100%;overflow:hidden;}
+.brandtitle {margin:2px 10px;}
+.brandtitle h3{font-size:18px;font-weight:bold;text-transform:uppercase;}
+.brandtitle p{font-size:13px;font-style:italic;}
+.followlist .followbtn {right:15px;top:15px;}
+/*------------- Jockes Pages  ---------------*/
 .jockes {margin:0px;padding:0px;}
 .jockes .jockelist {padding:3px;margin:10px 0;background:#fff;}
 .jockes .jockelist blockquote {margin:2px;}
+.jockes .jockelist p {display:block;text-align:right;}
+.jockes .jockelist p a {color:#98bcf7;}
+.jockes .social {border-top:1px solid #eee;margin-top:10px;}
+.jockes .social a {width:24%;}
+.jockes .social a span {display:inline-block;margin:0 5px;}
 .pagenationpage { margin:10px 0;}
 /*------------- Downloaded Pages  ---------------*/
 .pages {max-height:100%;height:100%;top:0px !important;width:100%;padding-top:35px;}
@@ -142,7 +171,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ffffff', en
 .downloadlist {background:#fff;margin:10px 0px;border-bottom:1px solid #eaeaea;border-top:1px solid #eaeaea;}
 .downloadlist .thumb {width:25%;margin-right:5px;}
 .downloadlist .thumbdetails {width:65%;margin-right:10px;}
-.downloadlist .thumbdetails h4 {font-size:13px;height:40px;overflow:hidden;line-height:15px;}
+.downloadlist .thumbdetails h4 {font-size:13px;height:40px;overflow:hidden;line-height:15px;padding-top:5px;}
 .downloadlist .thumbdetails h6 {background:#eee;border-radius:10px;width:100%; margin:5px 0 2px;overflow:hidden;}
 .downloadlist .thumbdetails h6 span {padding:2px 0;width:60%; background:#036;display:block;}
 .downloadlist .thumbdetails p {font-size:10px;color:#999;}
@@ -159,21 +188,10 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ffffff', en
 .notificationTitle p {font-size:11px;color:#999;}
 /*------------- Share Popup ---------------*/
 .sharevideos {border-radius:4px;top:30% !important;background:#fff;}
-.sharevideos ul li a {font-size:16px;padding:10px;display:block;width:100%;}
-/*------------- Page Uploaded  ---------------*/
-/*#uploadpage {max-height:100%;height:100%;background:#fff;padding-top:35px;}
-#uploadpage .file-field .btn, #uploadpage .file-field .btn-large {height:auto;line-height:20px;padding:10px;width:100%;}
-.fileuploaded {padding:15px;position:fixed;height:100%;overflow-y:scroll;padding-bottom:30px;}
-.fileuploaded select {display:block;}
-.previews {margin-top:20px}
-.previews h4 {font-size:20px;color:#555;font-weight:bold;margin:10px 0;display:block;}*/
-/*-------------- Comments box ------*/
-#comment {margin:0px;padding:0px;max-height:70%;height:100%;bottom:-1px !important;}
-#comment .closebtn {position:absolute;right:0px;top:0px;}
-#comment h3 {padding:10px 30px;font-weight:bold;font-size:18px;text-transform:uppercase;}
-#comment p {position:relative;font-weight:bold;}
-#comment p a {margin:20px 0;overflow:inherit;text-align:center;line-height:25px;padding:0px 5px;width:24%;}
-#comment p span {display:block;font-size:12px;}
+.sharevideos ul li a {font-size:16px;padding:5px 10px;display:block;width:100%;}
+/*-------------- Toss box ------*/
+.mytoss {margin:0px;padding:0px;background:#333;color:#fff;}
+.mytoss h3 {padding:10px;font-size:14px;text-transform:uppercase;}
 /*-------------- Share box ------*/
 #sharebox {margin:0px;padding:0px;max-height:25%;height:100%;}
 #sharebox .closebtn {position:absolute;right:0px;top:0px;}
@@ -190,34 +208,35 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ffffff', en
 .searchbar a {display:block;width:100%;position:static;}
 .searchbar input[type="text"]{background:#fff;border:none;border-radius:3px;padding:5px 35px;font-size:15px;box-sizing:border-box;height:30px;margin:0px}
 .searchbar:after {content:"";background:url(../images/search.svg) no-repeat;position:absolute;height:16px;width:16px;left:20px;top:12px}
-.searchbar input[type="text"]:focus {border:none !important;box-shadow:none !important;}
-.modal.searchbox{position:absolute;top:0px !important;left:0px;width:100%;height:100%;max-height:100%;background:#eee;border-radius:0;padding-top:35px;}
-.modal.searchbox input[type="search"] {margin:5px 0;padding:5px;background:#eee;border:none;border-radius:15px;width:75%;height:auto;}
-.modal.searchbox button {border:none;background:none;}
-.modal.searchbox button i {background-position:-26px -147px;width:16px;height:16px;}
-.modal.searchbox input[type="search"]:focus, .modal.searchbox input[type="button"]:focus {border:none;box-shadow:none;outline:none;}
+.searchbox input[type="search"] {margin:5px 0;padding:5px;background:#eee;border:none;border-radius:15px;width:80%;height:auto;}
+.searchbox input:focus {border:none !important;box-shadow:none !important;}
+
+
+.searchbox .autocomplete-content {position:absolute;left:0px;top:38px;width:100%;margin:0px;box-shadow:none;}
+.searchbox .autocomplete-content li {border-bottom:1px solid #f4f4f4;}
 .searchcat {margin:0px; padding:10px;}
 .searchcat h3 {font-size:13px;font-weight:bold;padding:5px;}
 .searchcat ul {margin:0px;padding:0px;}
-.searchcat ul li {display:inline-block;font-size:12px;border:1px solid #ddd;padding:3px 10px;margin:3px 5px;background:#fff;}
+.searchcat ul li {display:inline-block;font-size:14px;border:1px solid #ddd;padding:3px 10px;margin:5px;background:#ececec;border-radius:5px;}
 .topsearch {margin:0px;padding:0px;}
 .topsearch ul{margin:0px;padding:0px;list-style:none;}
 .topsearch ul li {width:49%;margin:0px;padding:0px;}
 .topsearch ul li a {display:block;}
+/*-------------  Login Pages ---------------*/
+#loginpage{background:#b5e2f3;}
+.loginbanner {position:absolute;top:0px;left:0px;width:100%;height:100%;}
+.loginbanner img { height:100%;}
+.login-form, .signup-form {padding:20px;margin:20px;border-radius:2px;background:rgba(255,255,255,0.9);position:absolute;top:56px;left:0;right:0;z-index:99;}
+.login-form h1, .signup-form h1 {margin-bottom:30px;text-align:center;font-size:2.4rem;}
+.login-form a.btn, .signup-form a.btn {display:block;width:100%;margin-bottom:15px;color:#fff;}
+.login-form a,.signup-form a {color:#039be5;}
+.login-form .input-field label, .signup-form .input-field label {color:#000;}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+.termspage {margin:0px;padding:0px;}
+.termslist {margin-bottom:10px;background:#fff;padding:10px;}
+.termslist h2 {font-size:16px;font-weight:bold;padding-bottom:5px;}
+.termslist p {font-size:14px;}
 
 
 

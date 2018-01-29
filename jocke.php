@@ -9,12 +9,88 @@
   </div>
   
  <div class="jockes">
-<div class="jockelist"><blockquote> दुकानदार : कैसा सूट दिखाऊँ ? महिला : पड़ोसन तड़प – तड़प कर दम तोड़ दे ऐसा</blockquote></div>
-<div class="jockelist"><blockquote>सोनू निगम : सुबह -सुबह मेरी नींद आज़ान से खुलती है पाकिस्तानी : खुशनसीब हो भाई जान , हमारी तो बम धमाके से खुलती है</blockquote></div>
-<div class="jockelist"><blockquote>संजू : पापा मुझे एक लड़की पसंद है , मैं उससे शादी करना चाहता हूँ पापा : क्या वो भी तुझे पसन्द करती है ? संजू : हाँ जी हाँ पापा : जिस लड़की की पसन्द ऐसी हो मैं उसे अपनी बहू नहीं बना सकता</blockquote></div>
-
-<div class="jockelist"><blockquote>पत्नी:- अजी सुनते हो ? हमारी शादी करवाने वाले पंडित जी का देहांत हो गया <br />पति:- एक ना एक दिन तो उसे उसके कर्मों का फल मिलना ही था.</blockquote></div>
-
+<div class="jockelist">
+<blockquote> दुकानदार : कैसा सूट दिखाऊँ ? महिला : पड़ोसन तड़प – तड़प कर दम तोड़ दे ऐसा 
+<p><a class="waves-effect waves-light modal-trigger" href="#catlisting">Read More..</a></p></blockquote>
+<div class="social">
+        <a href="javascript:void(0)" class="likes"><i></i><span>225k</span></a>
+        <a href="javascript:void(0)" class="views"><i></i> <span>225k</span></a>
+        <a href="#copy" class="modal-trigger copy"><i></i> <span>500k</span></a>
+        <a href="#sharebox" class="modal-trigger share"><i></i> <span>8k</span></a>
+        </div>
+</div>
+<div class="jockelist">
+<blockquote>सोनू निगम : सुबह -सुबह मेरी नींद आज़ान से खुलती है पाकिस्तानी : खुशनसीब हो भाई जान , हमारी तो बम धमाके से खुलती है
+<p><a class="waves-effect waves-light modal-trigger" href="#catlisting">Read More..</a></p></blockquote>
+<div class="social">
+        <a href="javascript:void(0)" class="likes"><i></i><span>225k</span></a>
+        <a href="javascript:void(0)" class="views"><i></i> <span>225k</span></a>
+        <a href="#copy" class="modal-trigger copy"><i></i> <span>500k</span></a>
+        <a href="#sharebox" class="modal-trigger share"><i></i> <span>8k</span></a>
+        </div>
+</div>
+<div class="jockelist">
+<blockquote>संजू : पापा मुझे एक लड़की पसंद है , मैं उससे शादी करना चाहता हूँ पापा : क्या वो भी तुझे पसन्द करती है ? संजू : हाँ जी हाँ पापा : जिस लड़की की पसन्द ऐसी हो मैं उसे अपनी बहू नहीं बना सकता
+<p><a class="waves-effect waves-light modal-trigger" href="#catlisting">Read More..</a></p></blockquote>
+<div class="social">
+        <a href="javascript:void(0)" class="likes"><i></i><span>225k</span></a>
+        <a href="javascript:void(0)" class="views"><i></i> <span>225k</span></a>
+        <a href="#copy" class="modal-trigger copy"><i></i> <span>500k</span></a>
+        <a href="#sharebox" class="modal-trigger share"><i></i> <span>8k</span></a>
+        </div>
+</div>
+<div class="jockelist">
+<blockquote>पत्नी:- अजी सुनते हो ? हमारी शादी करवाने वाले पंडित जी का देहांत हो गया <br />पति:- एक ना एक दिन तो उसे उसके कर्मों का फल मिलना ही था.
+<p><a class="waves-effect waves-light modal-trigger" href="#catlisting">Read More..</a></p></blockquote>
+<div class="social">
+        <a href="javascript:void(0)" class="likes"><i></i><span>225k</span></a>
+        <a href="javascript:void(0)" class="views"><i></i> <span>225k</span></a>
+        <a href="#copy" class="modal-trigger copy"><i></i> <span>500k</span></a>
+        <a href="#sharebox" class="modal-trigger share"><i></i> <span>8k</span></a>
+        </div>
+</div>
+<div class="jockelist">
+<blockquote>पत्नी:- अजी सुनते हो ? हमारी शादी करवाने वाले पंडित जी का देहांत हो गया <br />पति:- एक ना एक दिन तो उसे उसके कर्मों का फल मिलना ही था.
+<p><a class="waves-effect waves-light modal-trigger" href="#catlisting">Read More..</a></p></blockquote>
+<div class="social">
+        <a href="javascript:void(0)" class="likes"><i></i><span>225k</span></a>
+        <a href="javascript:void(0)" class="views"><i></i> <span>225k</span></a>
+        <a href="#copy" class="modal-trigger copy"><i></i> <span>500k</span></a>
+        <a href="#sharebox" class="modal-trigger share"><i></i> <span>8k</span></a>
+        </div>
+</div>
+<div class="jockelist"><div class="jokesimg"><img src="assests/images/jockes/jockes.jpg"/></div>
+<div class="social">
+        <a href="javascript:void(0)" class="likes"><i></i><span>225k</span></a>
+        <a href="javascript:void(0)" class="views"><i></i> <span>225k</span></a>
+        <a href="#downloadtoss" class="modal-trigger download"><i></i> <span>500k</span></a>
+        <a href="#sharebox" class="modal-trigger share"><i></i> <span>8k</span></a>
+</div>
+</div>
+<div class="jockelist"><div class="jokesimg"><img src="assests/images/jockes/jockes1.jpg"/></div>
+<div class="social">
+        <a href="javascript:void(0)" class="likes"><i></i><span>225k</span></a>
+        <a href="javascript:void(0)" class="views"><i></i> <span>225k</span></a>
+        <a href="#downloadtoss" class="modal-trigger download"><i></i> <span>500k</span></a>
+        <a href="#sharebox" class="modal-trigger share"><i></i> <span>8k</span></a>
+        </div>
+</div>
+<div class="jockelist"><div class="jokesimg"><img src="assests/images/jockes/jockes2.jpg"/></div>
+<div class="social">
+        <a href="javascript:void(0)" class="likes"><i></i><span>225k</span></a>
+        <a href="javascript:void(0)" class="views"><i></i> <span>225k</span></a>
+        <a href="#downloadtoss" class="modal-trigger download"><i></i> <span>500k</span></a>
+        <a href="#sharebox" class="modal-trigger share"><i></i> <span>8k</span></a>
+        </div>
+</div>
+<div class="jockelist"><div class="jokesimg"><img src="assests/images/jockes/jockes3.jpg"/></div>
+<div class="social">
+        <a href="javascript:void(0)" class="likes"><i></i><span>225k</span></a>
+        <a href="javascript:void(0)" class="views"><i></i> <span>225k</span></a>
+        <a href="#downloadtoss" class="modal-trigger download"><i></i> <span>500k</span></a>
+        <a href="#sharebox" class="modal-trigger share"><i></i> <span>8k</span></a>
+        </div>
+</div>
 
 </div>
 <div class="pagenationpage">
@@ -30,3 +106,8 @@
 </div>
 
 </div>
+
+
+
+
+

@@ -1,13 +1,11 @@
 <div id="dropdown" class="dropdown-content">
   <ul>
-    <li><a href="#">My Watchlist</a></li>
-    <li><a href="#">Sign In</a></li>
-    <li><a href="#">Download Videos</a></li>
-    <li><a href="#">Terms of Use</a></li>
-    <li><a href="#">Privacy Policy</a></li>
+    <li><a href="#loginpage" class="waves-effect waves-light modal-trigger">Sign Up</a></li>
+    <li><a href="#watchlist" class="waves-effect waves-light modal-trigger">Watchlist</a></li>
+    <li><a href="#feedback" class="waves-effect waves-light modal-trigger">Feedback</a></li>
+    <li><a href="#termpolicy" class="waves-effect waves-light modal-trigger">Terms & Privacy Policy</a></li>
   </ul>
 </div>
-
 
 <div id="notification" class="modal pages">
 <div class="headertitle"> <a href="#" class="modal-action modal-close waves-effect waves-blue btn-flat backbtn"><i></i></a>
@@ -98,37 +96,29 @@
         </div>
       </div>
     </div>
-    <div id="downloading" class="tabpage active"> </div>
   </div>
 </div>
-<div id="downoption" class="modal modal-fixed-footer">
-  <div class="modal-content">
-    <h4>Download Pages</h4>
-    <p>A bunch of text</p>
-  </div>
-  <div class="modal-footer"> <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Agree</a> </div>
-</div>
 
 
-
-
-
-
-<div id="share" class="modal sharevideos">
+<div id="downoption" class="modal sharevideos">
 <ul>
-<li><a class="waves-effect waves-blue" href="#"> Report...</a></li>
-<li><a class="waves-effect waves-blue" href="#"> Copy Link</a></li>
-<li><a class="waves-effect waves-blue" href="#"> Turn On Post Notifications</a></li>
-<li><a class="waves-effect waves-blue" href="#"> Share on Messenger </a></li>
+<li><a class="waves-effect waves-blue" href="#"> Delete Items</a></li>
+<li><a class="waves-effect waves-blue" href="#"> Go to Page</a></li>
+<li><a class="waves-effect waves-blue" href="#"> Bookmarks </a></li>
+<li><a class="waves-effect waves-blue" href="#"> FeedBack</a></li>
 </ul>
 </div>
 
 
 
-<div id="comment" class="modal bottom-sheet">
-<div class="closebtn"><a href="javascript:void(0);" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a></div>
-<h3>Comments Here..</h3>
-  </div>
+
+
+
+
+
+
+
+
 
 
 
@@ -150,13 +140,12 @@
 
 
 
-<div id="searchbox" class="modal searchbox">
+<div id="searchbox" class="modal searchbox pages">
   <div class="headertitle">
-<a href="#!" class="modal-action modal-close waves-effect waves-blue btn-flat backbtn"><i></i></a><input type="search" placeholder="Search Videos">
-<button class="searchbtn"><i></i></button>
+<a href="#!" class="modal-action modal-close waves-effect waves-blue btn-flat backbtn"><i></i></a>
+<input type="search" id="autocomplete-input" class="autocomplete" placeholder="Search Videos">
+
 <div class="clear"></div></div>
-  
-  
    <div class="mainpages">
   <div class="searchcat">
     <h3>Hot Keywords</h3>
@@ -200,14 +189,7 @@
 
 
 
-
-
-
-
-
-
-
-
-
+  
+<div class="fixed-action-btn"><a class="btn-floating cyan pulse modal-trigger edit" href="#profile"><i></i></a></div>
 
 
