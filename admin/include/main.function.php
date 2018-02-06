@@ -21,6 +21,16 @@ function checklogin($user_type = 'member'){
 	return true;
 }
 
+function is_front_login(){
+	if( isset($_SESSION['id']) && is_numeric($_SESSION['id']) && $_SESSION['id'] > 0){
+		secure_check();
+		return true;
+	}else{
+		return false;
+	}
+}
+
+
 
 function secure_check(){
 	$_SESSION['refreshtime'] = time();

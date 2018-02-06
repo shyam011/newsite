@@ -4,6 +4,7 @@ $s = usersClass::getUser();
 $s = json_decode($s);
 echo "<pre>";print_r($s->data);die;
 */
+//echo is_front_login();
 ?>
 
 <?php include 'include/head.php';?>

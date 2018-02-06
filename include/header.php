@@ -1,3 +1,12 @@
+<?php
+if( is_front_login() === true ){
+	$name = $_SESSION['fname'].' '.$_SESSION['lname'];
+	$email = $_SESSION['email'];
+}else{
+	$name = 'Hi Guest';
+	$email = "info@jyopic.com";
+}
+?>
 <header> <a href="#!" class="waves-effect waves-light button-collapse menuicon" data-activates="leftmenu"><img src="assests/images/menu.svg" width="25"></a> <a href="#!" class="waves-effect waves-light logo"><img src="assests/images/jyopiclogo.png"></a>
   <div class="right"> <a href="#downloads" class="waves-effect waves-light modal-trigger downloadbtn"><img src="assests/images/download.svg" width="15"></a> <a href="#notification" class="waves-effect waves-light modal-trigger downloadbtn"><img src="assests/images/notification.svg" width="18"></a> 
     <!--<a class="btn-floating blue pulse modal-trigger msg" href="#uploadpage"><img src="assests/images/messanger.svg" width="15"></a>--> 
@@ -20,8 +29,8 @@
   <div class="profileimg">
     <div class="profilepic"><img src="assests/images/brandimage.png"></div>
     <div class="profilename">
-      <h3>Gautam Kumar</h3>
-      <p>kgatuam431@gmail.com</p>
+      <h3><?php echo $name;?></h3>
+      <p><?php echo $email;?></p>
     </div>
     <svg class="shape" viewBox="0 0 100 102" preserveAspectRatio="none">
     <path d="M0 0 L50 100 L100 0 Z"></path>
@@ -53,4 +62,7 @@
       </ul>
     </div>
   </li>
+	<?php if(is_front_login() === true):?>
+  <li><div class="collapsible-header waves-effect"><a href="?logout=true">Logout</a></div></li>
+	<?php endif;?>
 </ul>
