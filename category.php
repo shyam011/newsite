@@ -177,18 +177,19 @@
 
 
 
-
+<?php if( is_front_login() === false ): ?>
 <div id="loginpage" class="modal pages">
 <div class="headertitle"> <a href="#" class="modal-action modal-close waves-effect waves-blue btn-flat backbtn"><i></i></a>
 <a href="#" class="waves-effect waves-blue btn-flat">Login</a></div>
 <div class="loginbanner"><img src="assests/images/profile-bg.jpg"></div>
 <div class="login-form z-depth-1">
 <h1>Login</h1>
-<div class="input-field"><input class="validate" id="login" type="text"> <label for="login">Username</label></div>
-<div class="input-field" style="margin-bottom:20px;"><input class="validate" id="login-psw" type="password"> <label for="login-psw">Password</label></div>
-<a class="waves-effect waves-light btn" href="#">Login</a> 
+<div class="input-field"><input class="validate" id="login_user" type="text"> <label for="login_user">Username</label></div>
+<div class="input-field" style="margin-bottom:20px;"><input class="validate" id="login_pass" type="password"> <label for="login_pass">Password</label></div>
+<a class="waves-effect waves-light btn" id="dologin" href="#">Login</a> 
 <span>Don't have an account? <a class="signupbtn waves-effect waves-red" href="#">Sign Up</a></span>
 </div>
+<?php endif; ?>
 
 
 

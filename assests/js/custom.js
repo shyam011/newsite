@@ -51,4 +51,23 @@ $(document).ready(function(e) {
 	$(".social a.likes, .social a.download, .social a.share").click(function(){
 	  $(this).addClass("active");	
 	});
+
+
+	//## 
+		$('#dologin').click(function(){
+			$.ajax({
+				url:'ajax.user.php',
+				type:'post',
+				data:{mode:'dologin',email:$('#login_user').val(),password:$('#login_pass').val()},
+				success:function(result){
+					var fresh = JSON.parse(result);
+					if(fresh.success == true){
+						window.location.reload();
+					}else{
+						alert(fresh.msg);
+					}
+				}
+			});
+		});
+	//## 
 });

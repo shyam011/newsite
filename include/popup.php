@@ -1,6 +1,10 @@
 <div id="dropdown" class="dropdown-content">
   <ul>
-    <li><a href="#loginpage" class="waves-effect waves-light modal-trigger">Sign Up</a></li>
+	<?php if( is_front_login() === true ){ ?>
+    <li><a href="?logout=true" class="waves-effect waves-light modal-trigger">Sign Out</a></li>
+	<?php }else{ ?>
+    <li><a href="#loginpage" class="waves-effect waves-light modal-trigger">Sign In</a></li>
+	<?php } ?>
     <li><a href="#watchlist" class="waves-effect waves-light modal-trigger">Watchlist</a></li>
     <li><a href="#feedback" class="waves-effect waves-light modal-trigger">Feedback</a></li>
     <li><a href="#termpolicy" class="waves-effect waves-light modal-trigger">Terms & Privacy Policy</a></li>
